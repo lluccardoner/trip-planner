@@ -4,22 +4,16 @@ import "./index.css";
 
 class Calendar extends React.Component {
   render() {
-    const weeks = [<Week />, <Week />, <Week />, <Week />];
+    const weeks = [];
+    for (let i = 0; i < 4; i++) weeks.push(<Week />);
     return <div>{weeks}</div>;
   }
 }
 
 class Week extends React.Component {
   render() {
-    const days = [
-      <Day />,
-      <Day />,
-      <Day />,
-      <Day />,
-      <Day />,
-      <Day />,
-      <Day />,
-    ];
+    const days = [];
+    for (let i = 0; i < 7; i++) days.push(<Day />);
     return <div className="week">{days}</div>;
   }
 }
