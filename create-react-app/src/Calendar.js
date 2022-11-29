@@ -13,6 +13,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function CalendarContent() {
+  const items = [];
+  for (let i = 0; i < 30; i++) {
+    items.push(<Item>{i + 1}</Item>);
+  }
   return (
     <Container
       maxWidth="xl"
@@ -25,15 +29,7 @@ function CalendarContent() {
         gap: 2,
       }}
     >
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
-      <Item>5</Item>
-      <Item>6</Item>
-      <Item>7</Item>
-      <Item>8</Item>
-      <Item>9</Item>
+      {items}
     </Container>
   );
 }
